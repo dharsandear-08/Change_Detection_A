@@ -13,7 +13,6 @@ ENV/
 .ipynb_checkpoints/
 
 # Project Data and Outputs
-data/examples/
 data/working/
 data/user_uploads/
 data/output/
