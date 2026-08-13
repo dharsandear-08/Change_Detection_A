@@ -19,3 +19,50 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+================================================================================
+THIRD-PARTY OPEN-SOURCE SOFTWARE INVENTORY & PURPOSE
+================================================================================
+
+This project utilizes several high-performance, open-source libraries. Below is the
+complete inventory detailing their specific usage and core purpose:
+
+1. Rasterio (v1.4.x)
+   - Usage: Handles reading, writing, and masking of high-resolution temporal GeoTIFF bands.
+   - Purpose: Lossless, pythonic read/write interface for coordinate-georeferenced raster datasets.
+
+2. GeoPandas (v1.1.x)
+   - Usage: Manages, validates, filters, and exports GIS feature tables (GeoPackages, GeoJSONs, Shapefiles).
+   - Purpose: Extends Pandas dataframes with robust spatial database geometry operations.
+
+3. Shapely (v2.1.x)
+   - Usage: Computes mathematical area calculations, lengths, centroids, and polygon intersections.
+   - Purpose: Computational geometry engine to generate, manipulate, and query GIS vector structures.
+
+4. NetworkX (v3.x)
+   - Usage: Constructs road network endpoint topological graphs and analyzes routing connectivity.
+   - Purpose: Network graph analysis library to evaluate node degrees and detect dangling dead-ends.
+
+5. OpenCV (v5.x / opencv-python-headless)
+   - Usage: Executes sub-pixel visual phase correlation and image-contrast roof thresholding.
+   - Purpose: High-speed computer-vision library for raster image registration and segmentation.
+
+6. Scikit-Image (v0.26.x)
+   - Usage: Runs mathematical morphological skeletonization on road pixels to extract clean centerlines.
+   - Purpose: Image-processing toolkit to perform structural thinning and skeleton tracing.
+
+7. Streamlit (v1.61.x)
+   - Usage: Builds the 10-tab visual UI dashboard, manual parameter sliders, and interactive QA table.
+   - Purpose: Low-code web framework to instantly construct and serve interactive data applications.
+
+8. Folium (v0.20.x)
+   - Usage: Compiles the Leaflet interactive web map with layer toggle selectors and structured popup tables.
+   - Purpose: Python wrapper for Leaflet JS to render dynamic interactive map visualisations in browsers.
+
+9. PyProj (v3.7.x)
+   - Usage: Conducts precise cartographic projection translations (e.g. from Web Mercator to WGS84 coordinates).
+   - Purpose: Interface to PROJ for geodetic transformations and EPSG coordinate reference system mapping.
+
+10. PyTest (v9.1.x)
+    - Usage: Automated unit-testing framework to programmatically assert backend pipeline execution gates.
+    - Purpose: Structural test runner to write and execute programmatic validation assertions.
