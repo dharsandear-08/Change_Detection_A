@@ -1,0 +1,123 @@
+================================================================================
+APPLE CHANGE DETECTION & AUTOMATED MAP UPDATE POC - RECOMMENDED SOFTWARE & ENVIRONMENT
+================================================================================
+
+This document lists the recommended client-side and production GIS software, versions,
+plugins, configuration settings, installation commands, and directory layouts
+required to run, visualize, and scale the Apple Change Detection POC.
+
+--------------------------------------------------------------------------------
+1. RECOMMENDED GIS CLIENT & CLI TOOLS
+--------------------------------------------------------------------------------
+
+- QGIS Desktop (Latest Long-Term Release - LTR)
+  * Version: QGIS 3.34 LTR or QGIS 3.40 LTR
+  * Purpose: Authoritative visual mapping, QA digitizing, and cartography.
+  * Essential Plugins:
+    - QuickMapServices (Provides instant basemaps, e.g., Google, Bing, Esri, OSM)
+    - Deepness (Standard QGIS integration for deep learning inference, supporting ONNX models)
+
+- GDAL (Geospatial Data Abstraction Library)
+  * Version: GDAL 3.8.x or newer
+  * Purpose: Core command-line raster and vector translators, warping, and resampling.
+
+- OSGeo4W (For Windows Environments)
+  * Purpose: Standard binary installer for Windows, bundling QGIS, GDAL, Python, and PROJ.
+
+- Git
+  * Version: Git 2.40.x or newer
+  * Purpose: Version control and multi-temporal release alignment.
+
+--------------------------------------------------------------------------------
+2. INSTALLATION COMMANDS
+--------------------------------------------------------------------------------
+
+### Windows 10/11 (Primary Production Target)
+1. Download the OSGeo4W Network Installer from: https://trac.osgeo.org/osgeo4w/
+2. Run the installer and select "Express Install". This automatically installs:
+   - QGIS LTR
+   - GDAL
+   - python3-gdal
+   - msys64 / shell components
+3. Install Git for Windows from: https://git-scm.com/download/win
+
+### Linux (Ubuntu / Debian - Development Reference)
+Run the following commands to install the complete GIS toolchain:
+```bash
+sudo apt update
+sudo apt install -y gdal-bin python3-gdal qgis git unzip
+```
+
+--------------------------------------------------------------------------------
+3. QGIS CLIENT PLUGINS & STYLING CONFIGURATION
+--------------------------------------------------------------------------------
+
+### QuickMapServices Plugin Configuration:
+1. In QGIS, navigate to: Plugins -> Manage and Install Plugins...
+2. Search for "QuickMapServices" and click "Install Plugin".
+3. Once installed, go to: Web -> QuickMapServices -> Settings.
+4. Go to the "More services" tab and click "Get contributed pack" to unlock Google Hybrid and Bing Satellite basemaps.
+
+### Deepness Plugin (Deep Learning Integration):
+1. Navigate to: Plugins -> Manage and Install Plugins...
+2. Search for "Deepness" and click "Install Plugin".
+3. Configure the path to the ONNX model inside QGIS under the Deepness configuration tab to run automated inference.
+
+### Default CRS Setting:
+1. Navigate to: Settings -> Options -> CRS.
+2. Under "CRS for Projects", select "Use a default CRS".
+3. Set the default CRS to: `EPSG:3857 - WGS 84 / Pseudo-Mercator` (Web Mercator) to ensure perfect matching with authoritative POC files.
+
+--------------------------------------------------------------------------------
+4. RECOMMENDED PRODUCTION DIRECTORY LAYOUT
+--------------------------------------------------------------------------------
+
+We recommend keeping a strict separation between raw imagery, intermediate
+workspace scratch, reference layers, and output packages.
+
+```text
+Apple_Change_Detection_POC/
+│
+├── app.py                          # Streamlit Interactive App
+├── recommended.txt                 # Deployment specifications
+├── requirements.txt                # Python libraries manifest
+├── PROJECT_STATUS.md               # Dynamic status ledger
+│
+├── Tools/                          # DD_Style deployment utilities
+│   └── folder_to_txt.py
+│
+├── src/                            # Modular pipeline Python source
+│   ├── ingestion/
+│   ├── preprocessing/
+│   ├── registration/
+│   ├── change_detection/
+│   ├── false_change_filter/
+│   ├── aoi/
+│   ├── feature_extraction/
+│   ├── topology/
+│   ├── attributes/
+│   ├── qa/
+│   ├── evaluation/
+│   ├── export/
+│   └── visualization/
+│
+├── data/                           # Sized geospatial inputs
+│   ├── examples/                   # 15cm high-res temporal TIFFs (lossless compressed)
+│   ├── working/                    # preprocessed 3-band aligned rasters
+│   └── reference/                  # expected ground-truth GPKGs
+│
+├── output/                         # Main deliverables directory
+│   ├── raster/                     # georeferenced change mask & score GeoTIFFs
+│   ├── gis/                        # compiled Master GPKG with 10 tables/layers
+│   ├── geojson/                    # WGS84 GeoJSON layers for browser rendering
+│   ├── shapefile/                  # ESRI Shapefile components separated by type
+│   ├── packages/                   # complete bundled deliverable zip files
+│   ├── evaluation/                 # precision/recall metrics and plot overlays
+│   └── preview/                    # interactive standalone Leaflet preview map
+│
+├── tracking/                       # Audit and phase verification ledgers
+│   ├── MASTER_TRACKER.md           # Authoritative phase gate table
+│   └── phase_PXX_report.md         # Detailed deliverables proof per phase
+│
+└── tests/                          # Complete automated validation suites
+```

@@ -27,7 +27,7 @@ This is the authoritative progress tracker for the **Apple Change Detection & Au
 | **P20** | Streamlit | **PASS** | YES (Interactive app compilation check) | [Report](phase_P20_report.md) |
 | **P21** | DD_Style V1 | **PASS** | YES (Flat-file compiler check) | [Report](phase_P21_report.md) |
 | **P22** | DD_Style V2 | **PASS** | YES (Flat-file compiler check) | [Report](phase_P22_report.md) |
-| **P23** | Recommended.txt | NOT_STARTED | - | - |
+| **P23** | Recommended.txt | **PASS** | YES (File format and structural check) | [Report](phase_P23_report.md) |
 | **P24** | Testing | NOT_STARTED | - | - |
 | **P25** | Clean Install Test | NOT_STARTED | - | - |
 | **P26** | Git Test | NOT_STARTED | - | - |
