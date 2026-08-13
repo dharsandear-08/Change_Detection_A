@@ -19,7 +19,7 @@ This is the authoritative progress tracker for the **Apple Change Detection & Au
 | **P12** | QA Task Generation | **PASS** | YES (QA tasks compilation check) | [Report](phase_P12_report.md) |
 | **P13** | Ground Truth Evaluation | **PASS** | YES (Intersection metrics check) | [Report](phase_P13_report.md) |
 | **P14** | 2024 Secondary Test | **PASS** | YES (Multi-temporal run check) | [Report](phase_P14_report.md) |
-| **P15** | Master GeoPackage | NOT_STARTED | - | - |
+| **P15** | Master GeoPackage | **PASS** | YES (10-layer schema verification) | [Report](phase_P15_report.md) |
 | **P16** | Shapefile Export | NOT_STARTED | - | - |
 | **P17** | GeoJSON | NOT_STARTED | - | - |
 | **P18** | Raster Outputs | NOT_STARTED | - | - |
