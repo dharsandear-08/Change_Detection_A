@@ -3,8 +3,8 @@
 This document tracks the high-level status of the Apple Change Detection and Automated Map Update Proof of Concept.
 
 ## Overall Project Status
-- **Current Phase**: Phase 16 — Shapefile Export
-- **Project Status**: PASS (Phases 0 to 16 completed successfully)
+- **Current Phase**: Phase 17 — GeoJSON
+- **Project Status**: PASS (Phases 0 to 17 completed successfully)
 - **Target OS**: Windows 10/11 (Primary), compatible with Linux/macOS
 - **Python Version**: 3.11.2 (Development), 3.12.x (Target)
 
@@ -31,7 +31,7 @@ This document tracks the high-level status of the Apple Change Detection and Aut
 | **Phase 14** | 2024 Secondary Test | **PASS** | 2026-08-13 | Evaluated 2024 &harr; 2025 robustness (5 kept, Precision: 0.6692) |
 | **Phase 15** | Master GeoPackage | **PASS** | 2026-08-13 | Compiled all 10 vector layers into unified Apple_POC_Final.gpkg |
 | **Phase 16** | Shapefile Export | **PASS** | 2026-08-13 | Exported all layers to Shapefiles and packed in ZIP |
-| **Phase 17** | GeoJSON | NOT_STARTED | | |
+| **Phase 17** | GeoJSON | **PASS** | 2026-08-13 | Exported all layers to WGS84 GeoJSON format |
 | **Phase 18** | Raster Outputs | NOT_STARTED | | |
 | **Phase 19** | HTML / OSM Preview | NOT_STARTED | | |
 | **Phase 20** | Streamlit | NOT_STARTED | | |
