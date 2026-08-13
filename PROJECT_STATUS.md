@@ -3,8 +3,8 @@
 This document tracks the high-level status of the Apple Change Detection and Automated Map Update Proof of Concept.
 
 ## Overall Project Status
-- **Current Phase**: Phase 13 — Ground Truth Evaluation
-- **Project Status**: PASS (Phases 0 to 13 completed successfully)
+- **Current Phase**: Phase 14 — 2024 Secondary Test
+- **Project Status**: PASS (Phases 0 to 14 completed successfully)
 - **Target OS**: Windows 10/11 (Primary), compatible with Linux/macOS
 - **Python Version**: 3.11.2 (Development), 3.12.x (Target)
 
@@ -27,8 +27,8 @@ This document tracks the high-level status of the Apple Change Detection and Aut
 | **Phase 10** | Attributes | **PASS** | 2026-08-13 | Standardized layer schema and added geometry properties |
 | **Phase 11** | Confidence | **PASS** | 2026-08-13 | Calculated multi-dimensional confidence metrics across all features |
 | **Phase 12** | QA Task Generation | **PASS** | 2026-08-13 | Generated 38 QA tasks across buildings, roads, and construction |
-| **Phase 13** | Ground Truth Evaluation | NOT_STARTED | | |
-| **Phase 14** | 2024 Secondary Test | NOT_STARTED | | |
+| **Phase 13** | Ground Truth Evaluation | **PASS** | 2026-08-13 | Evaluated 2025 &harr; 2026 primary changes (Precision: 0.8512, IoU: 0.7266) |
+| **Phase 14** | 2024 Secondary Test | **PASS** | 2026-08-13 | Evaluated 2024 &harr; 2025 robustness (5 kept, Precision: 0.6692) |
 | **Phase 15** | Master GeoPackage | NOT_STARTED | | |
 | **Phase 16** | Shapefile Export | NOT_STARTED | | |
 | **Phase 17** | GeoJSON | NOT_STARTED | | |
