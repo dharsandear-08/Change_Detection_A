@@ -28,7 +28,7 @@ This is the authoritative progress tracker for the **Apple Change Detection & Au
 | **P21** | DD_Style V1 | **PASS** | YES (Flat-file compiler check) | [Report](phase_P21_report.md) |
 | **P22** | DD_Style V2 | **PASS** | YES (Flat-file compiler check) | [Report](phase_P22_report.md) |
 | **P23** | Recommended.txt | **PASS** | YES (File format and structural check) | [Report](phase_P23_report.md) |
-| **P24** | Testing | NOT_STARTED | - | - |
+| **P24** | Testing | **PASS** | YES (Pytest validation suite execution) | [Report](phase_P24_report.md) |
 | **P25** | Clean Install Test | NOT_STARTED | - | - |
 | **P26** | Git Test | NOT_STARTED | - | - |
 | **P27** | Final Documentation | NOT_STARTED | - | - |
