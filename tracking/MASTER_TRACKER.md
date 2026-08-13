@@ -20,7 +20,7 @@ This is the authoritative progress tracker for the **Apple Change Detection & Au
 | **P13** | Ground Truth Evaluation | **PASS** | YES (Intersection metrics check) | [Report](phase_P13_report.md) |
 | **P14** | 2024 Secondary Test | **PASS** | YES (Multi-temporal run check) | [Report](phase_P14_report.md) |
 | **P15** | Master GeoPackage | **PASS** | YES (10-layer schema verification) | [Report](phase_P15_report.md) |
-| **P16** | Shapefile Export | NOT_STARTED | - | - |
+| **P16** | Shapefile Export | **PASS** | YES (Centroid shape projection check) | [Report](phase_P16_report.md) |
 | **P17** | GeoJSON | NOT_STARTED | - | - |
 | **P18** | Raster Outputs | NOT_STARTED | - | - |
 | **P19** | HTML / OSM Preview | NOT_STARTED | - | - |
