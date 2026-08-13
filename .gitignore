@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+ENV/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Project Data and Outputs
+data/examples/
+data/working/
+data/user_uploads/
+data/output/
+output/
+release/
+tmp/
+temp/
+
+# IDEs
+.vscode/
+.idea/
