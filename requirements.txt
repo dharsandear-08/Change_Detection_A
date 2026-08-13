@@ -1,0 +1,22 @@
+# Geospatial Core Engine
+rasterio>=1.4.0
+geopandas>=1.0.0
+shapely>=2.0.0
+pyproj>=3.6.0
+
+# Mathematical Network & Imaging Graph
+networkx>=3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Computer Vision & Image Segmentation
+opencv-python-headless>=4.8.0
+scikit-image>=0.21.0
+
+# Visualization & Web Map Dashboards
+streamlit>=1.40.0
+folium>=0.15.0
+matplotlib>=3.7.0
+
+# Quality Assurance & Testing
+pytest>=8.0.0
